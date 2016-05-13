@@ -31,7 +31,7 @@ int main()
 		else
 			anotherItem = false;
 	}
-	
+
 	//Retrieve the payment from the user
 	bool paidEnough = false;
 	while (!paidEnough)
@@ -50,7 +50,7 @@ int main()
 			paidEnough = false;
 		}
 	}
-	
+
 
 	return 0;
 }
