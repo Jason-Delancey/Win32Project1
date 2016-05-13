@@ -12,7 +12,10 @@ using namespace std;
 int main()
 {
 	/*
+	//Personal Notes Below
+
 	//output to the console using the insertion operator
+	//endl inserts a newline character and flushes the stream
 	cout << "Test" << endl;
 
 	//input using the extraction operator, assigning the input to a variable
@@ -32,6 +35,10 @@ int main()
 		cout << temp << '\n';
 		i++;
 	}
+
+	//cout<<"Some stuff" <<a<<endl
+	//This appends the value of the variable 'a' to the end of the String that precedes it.
+	//Use the &, like 'int&', to use call by reference.
 	*/
 
     return 0;
