@@ -16,7 +16,6 @@ int main()
 	bool moreItems = true;
 	while (moreItems)
 	{
-		bool anotherItem;
 		string response;
 
 		//Retrieve the price of each item from the user
@@ -26,28 +25,28 @@ int main()
 		cout << "Do you have another item to enter?" << endl;
 		cin >> response;
 
-		if (response.compare("true") == 0)
-			anotherItem = true;
+		if (response.compare("yes") == 0)
+			moreItems = true;
 		else
-			anotherItem = false;
+			moreItems = false;
 	}
 
 	//Retrieve the payment from the user
-	bool paidEnough = false;
-	while (!paidEnough)
+	bool notEnough = true;
+	while (notEnough)
 	{
-		cout << "Thanks! Now please enter your payment amount in the form $##.##" << endl;
+		cout << "Please enter your payment amount in the form $##.##" << endl;
 		cin >> payment;
 
-		if (payment - price >= 0)
+		if (price - payment >= 0)
 		{
-			change = payment - price;
-			paidEnough = true;
+			cout << "I'm sorry but you did not provide enough to pay for these item." << endl;
+			notEnough = true;
 		}
 		else
 		{
-			cout << "I'm sorry but you did not provide enough to pay for these item.";
-			paidEnough = false;
+			change = price - payment;
+			notEnough = false;
 		}
 	}
 

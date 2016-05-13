@@ -8,10 +8,10 @@
 #include <cstdlib>
 using namespace std;
 
-
+/*
 int main()
 {
-	/*
+
 	//Personal Notes Below
 
 	//output to the console using the insertion operator
@@ -39,11 +39,12 @@ int main()
 	//cout<<"Some stuff" <<a<<endl
 	//This appends the value of the variable 'a' to the end of the String that precedes it.
 	//Use the &, like 'int&', to use call by reference.
-	*/
+	
 
     return 0;
 
 
 
 }
+*/
 
