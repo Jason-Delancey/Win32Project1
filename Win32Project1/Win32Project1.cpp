@@ -34,7 +34,7 @@ int main()
 		int temp = rand() % 6 + 1;
 		cout << temp << '\n';
 		i++;
-	}
+	}s
 
 	//cout<<"Some stuff" <<a<<endl
 	//This appends the value of the variable 'a' to the end of the String that precedes it.

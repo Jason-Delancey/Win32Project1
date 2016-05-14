@@ -7,11 +7,16 @@
 #include <string>
 using namespace std;
 
+//Get the number of dollars for the change
+int getDollars(double change);
+
+int getQuarters(int cents);
+
 int main()
 {
 	//Declare variables to hold the change
 	double price, payment, change;
-	int dollars, quarters, dimes, nickels, pennies;
+	int dollars, cents, quarters, dimes, nickels, pennies;
 
 	bool moreItems = true;
 	while (moreItems)
@@ -51,5 +56,38 @@ int main()
 	}
 
 
+	//Calculate the dollars and coins for the change due to the user
+	dollars = getDollars(change);
+	double temp = change - floor(change);
+	cents = (int)(temp * 100);
+
+	//Calculate the coins needed for the change
+	cout << "Here is your change due: " << endl;
+	cout << "Dollars: " << dollars << endl;
+	cout << "Quarters: " << getQuarters(cents) << endl;
+
 	return 0;
+}
+
+
+int getDollars(double change)
+{
+	int dollars = (int) change;
+	return dollars;
+}
+
+int getQuarters(int cents)
+{
+	bool moreCoins = true;
+	int numOfCoins = 0;
+	int QUARTER_VALUE = 25;
+	while (moreCoins)
+	{
+		if (cents > (QUARTER_VALUE * numOfCoins))
+			numOfCoins++;
+		else
+			moreCoins = false;
+	}
+
+	return numOfCoins;
 }
