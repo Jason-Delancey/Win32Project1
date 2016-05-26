@@ -1,14 +1,27 @@
 #include "Movie.h"
 #include <iostream>
-#include <array>
 using namespace std;
+//Collect the 3 favorite movies from the user on the console.
 
 //Default constructor
 Movie::Movie()
 {
+
+}
+
+//Destructor
+Movie::~Movie()
+{
+
+}
+
+//Methods
+//Retrieves all the information from the user and stores the data in arrays
+void Movie::doIt()
+{
 	cout << "We will now begin collecting your 3 favorite movies!" << endl;
-	int movies = 0;
-	while (movies < 3)
+	movieCounter = 0;
+	while (movieCounter < sizeof(movieNames))
 	{
 		cout << "Please enter the name of the movie: " << endl;
 		cin >> aMovie;
@@ -25,31 +38,26 @@ Movie::Movie()
 				wrongYear = false;
 		}
 
-		cout << "What was the movie's rating? G-General Audience, PG-Parental Guidance, R-Restricted, M-Mature" << endl;
+		cout << "What was the movie's rating? Enter one of the following letters. G-General Audience, PG-Parental Guidance, R-Restricted, M-Mature " << endl;
 		cin >> aRating;
-	}
-	
-}
 
-//Destructor
-Movie::~Movie()
-{
-
-}
-
-//Methods
-void Movie::addMovie(string movie, int year, string rating)
-{
-	if (movieCounter < 3)
-	{
-		movieNames[movieCounter] = movie;
-		movieYears[movieCounter] = year;
-		movieRatings[movieCounter] = rating;
-		movieCounter++;
+		movieNames[movieCounter] = aMovie;
+		movieYears[movieCounter] = aYear;
+		movieRatings[movieCounter] = aRating;
 	}
 }
 
+//Prints the list of the top 3 favorite movies
 void Movie::printMovies()
 {
+	cout << "Here is a list of the top 3 movies: " << endl;
 
+	movieCounter = 0;
+	while (movieCounter < sizeof(movieNames))
+	{
+		cout << "Movie "<< movieCounter+1 <<": " << movieNames[movieCounter] << endl;
+		cout << "Year Released: " << movieYears[movieCounter] << endl;
+		cout << "Rating: " << movieRatings[movieCounter] << endl;
+		movieCounter++;
+	}
 }

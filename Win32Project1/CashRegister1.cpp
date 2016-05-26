@@ -21,6 +21,7 @@ int getDimes(int cents);
 int getNickels(int cents);
 int getPennies(int cents);
 
+/*
 int main()
 {
 	//Declare variables to hold the change
@@ -152,3 +153,4 @@ int getPennies(int cents)
 
 	return numOfCoins;
 }
+*/

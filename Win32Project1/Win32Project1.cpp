@@ -1,6 +1,7 @@
 // Win32Project1.cpp : Defines the entry point for the console application.
 //Practice file
 
+
 #include "stdafx.h"
 #include <iostream>
 #include <iomanip>
@@ -47,4 +48,3 @@ int main()
 
 }
 */
-

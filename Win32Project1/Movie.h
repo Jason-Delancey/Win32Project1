@@ -18,7 +18,7 @@ public:
 	~Movie();
 
 	//Methods
-	void addMovie(string movie, int year, string rating);
+	void doIt();
 	void printMovies();
 
 };
