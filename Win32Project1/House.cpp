@@ -38,9 +38,3 @@ void House::setColor(string c)
 {
 	houseColor = c;
 }
-
-//destructor method
-House::~House()
-{
-
-}
